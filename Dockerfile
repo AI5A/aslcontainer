@@ -10,4 +10,4 @@ RUN apt-get update && \
 
 COPY supervisor.conf /etc/supervisor/conf.d/asl.conf
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
+CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
