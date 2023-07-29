@@ -8,6 +8,6 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y supervisor asl-update-node-list asl-asterisk && \
     rm -rf /etc/asterisk
 
-COPY supervisor.conf /etc/supervisor/supervisord.conf
+COPY supervisor.conf /etc/supervisor/conf.d/asl.conf
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/supervisord.conf"]
